@@ -33,16 +33,14 @@ System.config({
 });
 
 System.config({
-  packages: {
+  meta: {
+    './global-creator.js': {
+      format: 'global'
+    },
     './global-user.js': {
-      globals: {
-        'SOME_GLOBAL': './global-creator.js'
-      },
-      meta: {
-        deps: [
-          './global-creator.js'
-        ]
-      }
+      deps: [
+        './global-creator.js'
+      ]
     }
   }
 });
