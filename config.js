@@ -43,19 +43,6 @@ System.config({
           './global-creator.js'
         ]
       }
-    },
-    '*app.js': {
-      name: 'app customname',
-      format: 'esm',
-      defaultExtension: '.js',
-      globals: {
-        'SOME_GLOBAL': './global-creator.js'
-      },
-      meta: {
-        deps: [
-          './global-creator.js'
-        ]
-      }
     }
   }
 });
