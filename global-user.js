@@ -1,8 +1,8 @@
-console.log('SOME_GLOBAL: ', SOME_GLOBAL);
-console.log('SOME_GLOBAL.foo: ', SOME_GLOBAL.foo);
+console.log('user: SOME_GLOBAL: ', SOME_GLOBAL);
+console.log('user: SOME_GLOBAL.foo: ', SOME_GLOBAL.foo);
 
 SOME_GLOBAL.globalUser = function () {
-  console.log('SOME_GLOBAL.globalUser created');
+  console.log('user: SOME_GLOBAL.globalUser created');
 };
 
 SOME_GLOBAL.globalUser.prototype.foo = function () {
