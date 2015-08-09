@@ -10,10 +10,7 @@ System.config({
   "paths": {
     "github:*": "jspm_packages/github/*",
     "npm:*": "jspm_packages/npm/*"
-  }
-});
-
-System.config({
+  },
   "map": {
     "babel": "npm:babel-core@5.8.20",
     "babel-runtime": "npm:babel-runtime@5.8.20",
@@ -29,19 +26,18 @@ System.config({
       "process": "github:jspm/nodelibs-process@0.1.1",
       "systemjs-json": "github:systemjs/plugin-json@0.1.0"
     }
-  }
-});
-
-System.config({
+  },
   packages: {
-    './global-user.js': {
-      globals: {
-        'SOME_GLOBAL': './global-creator.js'
-      },
+    './global-user': {
       meta: {
-        deps: [
-          './global-creator.js'
-        ]
+        './global-user/index.js': {
+          deps: [
+            './global-creator.js'
+          ],
+          globals: {
+            'SOME_GLOBAL': './global-creator.js'
+          }
+        }
       }
     }
   }
